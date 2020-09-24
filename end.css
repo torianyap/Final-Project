@@ -1,0 +1,14 @@
+h1{
+    text-align: center;
+    color: white;
+    font-family: Odin Rounded, cursive;
+    font-size: 50px;
+
+}
+body {
+    background-color: rgb(29, 26, 26);
+}
+
+button{
+    align-content: center;
+}
