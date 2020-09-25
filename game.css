@@ -54,8 +54,16 @@
     color: red;
 }
 
-#question{
+#question, h3{
     text-align: center;
+}
+
+#title{
+    margin-top: 70px   ;
+}
+
+#isi{
+    margin-top: -30px;
 }
 
 #hide{
