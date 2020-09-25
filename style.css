@@ -18,6 +18,12 @@ h1 {
     margin-bottom: 5rem;
 }
 
+h2{
+    font-size: 35px;
+    color: #fff;
+    margin-bottom: 5rem;  
+}
+
 h3{
     font-size: 20px;
     color: #fff;
@@ -54,4 +60,9 @@ h3{
     color: #fff;
     background-color: #005086;
     border-radius: 4px;
+}
+
+
+.hide{
+    display: none;
 }

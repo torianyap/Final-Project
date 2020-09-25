@@ -9,7 +9,27 @@
 <body>
     <div class="container flex-column flex-center">
         <h1>Thanks for playing</h1>
+        <h2 id="finalScore">Your Score: 0</h2>
+        <h2 id="congrats" class="hide">You're a total genius!!</h2>
         <a href="./index.html" class="btn" id='Play'>Play Again</a>
     </div>
+
+    <script>
+        let final = window.localStorage.getItem('mostRecentScore')
+        let scoreText = document.getElementById('finalScore')
+        let congrats = document.getElementById('congrats')
+
+        scoreText.innerText = `Your Score: ${final}` 
+
+        if (final < 500){
+            congrats.innerText = 'You might wanna study more'
+            congrats.classList.remove('hide')
+        }else if (final >500 && final < 800) {
+            congrats.innerText = 'Good Job, You Rock'
+            congrats.classList.remove('hide')
+        }else if (final === 1000){
+            congrats.classList.remove('hide')
+        }
+    </script>
 </body>
 </html>

@@ -77,3 +77,13 @@
 .correct{
     background-color: green;
 }
+
+#score{
+    text-align: center;
+}
+
+h2{
+    font-size: 35px;
+    color: #fff;
+    margin-bottom: 5rem;  
+}

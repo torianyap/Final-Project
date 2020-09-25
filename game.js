@@ -12,7 +12,7 @@ let questionList = [
         answer1: 'Eastern Pacific Ocean',
         answer2: 'Western Pacific Ocean',
 
-        correct: 'Western Pacific Ocean',
+        correct: 2,
         trivia: 'The Marina Trench is the deepest oceanic trench in the whole world'
     },
     {
@@ -91,9 +91,12 @@ let score = 0
 let availableQuestion = []
 let maxQuestion = 10
 let trivia = document.getElementById('isi')
+let points = 100
+let scoreText = document.getElementById('score')
 
 function startGame (){
     questionCounter = 0
+    score = 0
     availableQuestion = [...questionList]
     getNextQuestion()
 }
@@ -131,8 +134,17 @@ choices.forEach(choice => {
 
         let classToApply = selectedAnswer == currentQuestion.correct ? 'correct' : 'incorrect'
         setStatusClass(document.body,classToApply)
+
+        if (classToApply === 'correct'){
+            incrementScore(points)
+        }
     })
 })
+
+function incrementScore (num){
+    score += num
+    scoreText.innerText = `Score: ${score}`
+}
 
 function setStatusClass(element, status) {
     clearStatusClass(element)
@@ -149,3 +161,4 @@ function clearStatusClass(element) {
 }
 
 startGame()
+console.log(score)
